@@ -16,69 +16,70 @@
 //   You should have received a copy of the GNU Affero General Public License
 //   along with iTop. If not, see <http://www.gnu.org/licenses/>
 /**
- * Localized data
+ * Spanish Localized data
  *
  * @copyright   Copyright (C) 2010-2021 Combodo SARL
  * @license     http://opensource.org/licenses/AGPL-3.0
+ * @traductor   Miguel Turrubiates <miguel_tf@yahoo.com>
  */
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Core:DeletedObjectLabel' => '%1s (eliminado)',
-	'Core:DeletedObjectTip' => 'Elemento ha sido Eliminado en %1$s (%2$s)',
+	'Core:DeletedObjectTip'   => 'Elemento ha sido Eliminado en %1$s (%2$s)',
 
 	'Core:UnknownObjectLabel' => 'Elemento No Encontrado (Clase: %1$s, Identificador: %2$d)',
 	'Core:UnknownObjectTip' => 'El Elemento no pudo ser encontrado.  Pudo haber sido eliminado hace tiempo y purgado de la Bitácora.',
 
 	'Core:UniquenessDefaultError' => 'Regla de unicidad \'%1$s\' en error',
 
-	'Core:AttributeLinkedSet' => 'Arreglo de objetos',
+	'Core:AttributeLinkedSet'  => 'Arreglo de objetos',
 	'Core:AttributeLinkedSet+' => 'Cualquier tipo de objetos [subclass] de la misma clase',
 
 	'Core:AttributeLinkedSetDuplicatesFound' => 'Duplicates in the \'%1$s\' field : %2$s~~',
 
-	'Core:AttributeDashboard' => 'Panel de Control',
+	'Core:AttributeDashboard'  => 'Panel de Control',
 	'Core:AttributeDashboard+' => 'Panel de control y supervisión',
 
-	'Core:AttributePhoneNumber' => 'Número telefónico',
-	'Core:AttributePhoneNumber+' => '~~',
+	'Core:AttributePhoneNumber'  => 'Número telefónico',
+	'Core:AttributePhoneNumber+' => '',
 
-	'Core:AttributeObsolescenceDate' => 'Fecha de Obsolescencia',
-	'Core:AttributeObsolescenceDate+' => '~~',
+	'Core:AttributeObsolescenceDate'  => 'Fecha de Obsolescencia',
+	'Core:AttributeObsolescenceDate+' => '',
 
-	'Core:AttributeTagSet' => 'Lista de etiquetas',
-	'Core:AttributeTagSet+' => '~~',
-	'Core:AttributeSet:placeholder' => 'click to add~~',
-	'Core:AttributeClassAttCodeSet:ItemLabel:AttributeFromClass' => '%1$s (%2$s)~~',
-	'Core:AttributeClassAttCodeSet:ItemLabel:AttributeFromOneChildClass' => '%1$s (%2$s from %3$s)~~',
-	'Core:AttributeClassAttCodeSet:ItemLabel:AttributeFromSeveralChildClasses' => '%1$s (%2$s from child classes)~~',
+	'Core:AttributeTagSet'                                                     => 'Lista de etiquetas',
+	'Core:AttributeTagSet+'                                                    => '',
+	'Core:AttributeSet:placeholder'                                            => 'Click to agregar',
+	'Core:AttributeClassAttCodeSet:ItemLabel:AttributeFromClass'               => '%1$s (%2$s)',
+	'Core:AttributeClassAttCodeSet:ItemLabel:AttributeFromOneChildClass'       => '%1$s (%2$s de %3$s)',
+	'Core:AttributeClassAttCodeSet:ItemLabel:AttributeFromSeveralChildClasses' => '%1$s (%2$s de clases hijas)',
 
-	'Core:AttributeCaseLog' => 'Bitácora',
-	'Core:AttributeCaseLog+' => '~~',
+	'Core:AttributeCaseLog'  => 'Bitácora',
+	'Core:AttributeCaseLog+' => '',
 
-	'Core:AttributeMetaEnum' => 'Computed enum~~',
-	'Core:AttributeMetaEnum+' => '~~',
+	'Core:AttributeMetaEnum'  => 'Enumeración Calculada',
+	'Core:AttributeMetaEnum+' => '',
 
-	'Core:AttributeLinkedSetIndirect' => 'Arreglo de objetos (N-N)',
+	'Core:AttributeLinkedSetIndirect'  => 'Arreglo de objetos (N-N)',
 	'Core:AttributeLinkedSetIndirect+' => 'Cualquier tipo de objetos [subclass] de la misma clase',
 
-	'Core:AttributeInteger' => 'Entero',
+	'Core:AttributeInteger'  => 'Entero',
 	'Core:AttributeInteger+' => 'Valor numérico (puede ser negativo)',
 
-	'Core:AttributeDecimal' => 'Decimal',
+	'Core:AttributeDecimal'  => 'Decimal',
 	'Core:AttributeDecimal+' => 'Valor decimal (puede ser negativo)',
 
-	'Core:AttributeBoolean' => 'Booleano',
-	'Core:AttributeBoolean+' => 'Booleano',
-	'Core:AttributeBoolean/Value:null' => '',
-	'Core:AttributeBoolean/Value:yes' => 'Si',
-	'Core:AttributeBoolean/Value:no' => 'No',
+	'Core:AttributeBoolean'            => 'Booleano',
+	'Core:AttributeBoolean+'           => 'Booleano',
+	'Core:AttributeBoolean/Value:null' => 'Nulo',
+	'Core:AttributeBoolean/Value:yes'  => 'Si',
+	'Core:AttributeBoolean/Value:no'   => 'No',
 
-	'Core:AttributeArchiveFlag' => 'Bandera de Archivado',
-	'Core:AttributeArchiveFlag/Value:yes' => 'Si',
+	'Core:AttributeArchiveFlag'            => 'Bandera de Archivado',
+	'Core:AttributeArchiveFlag/Value:yes'  => 'Si',
 	'Core:AttributeArchiveFlag/Value:yes+' => 'Este objeto es solo visible en modo Archivado',
-	'Core:AttributeArchiveFlag/Value:no' => 'No',
-	'Core:AttributeArchiveFlag/Label' => 'Archivado',
-	'Core:AttributeArchiveFlag/Label+' => '',
-	'Core:AttributeArchiveDate/Label' => 'Fecha de Archivado',
+	'Core:AttributeArchiveFlag/Value:no'   => 'No',
+	'Core:AttributeArchiveFlag/Label'      => 'Archivado',
+	'Core:AttributeArchiveFlag/Label+'     => '',
+	'Core:AttributeArchiveDate/Label'      => 'Fecha de Archivado',
 	'Core:AttributeArchiveDate/Label+' => '',
 
 	'Core:AttributeObsolescenceFlag' => 'Bandera de Obsolescencia',
@@ -194,24 +195,24 @@ Operadores:<br/>
 	'Core:AttributeTable' => 'Tabla',
 	'Core:AttributeTable+' => 'Arreglo indexado con dos dimensiones',
 
-	'Core:AttributePropertySet' => 'Propiedades',
+	'Core:AttributePropertySet'  => 'Propiedades',
 	'Core:AttributePropertySet+' => 'Lista de propiedades sin tipo (nombre y valor)',
 
-	'Core:AttributeFriendlyName' => 'Nombre común',
+	'Core:AttributeFriendlyName'  => 'Nombre común',
 	'Core:AttributeFriendlyName+' => 'Atributo creado automáticamente; el nombre común es obtenido de varios atributos',
 
-	'Core:FriendlyName-Label' => 'Nombre común',
+	'Core:FriendlyName-Label'       => 'Nombre común',
 	'Core:FriendlyName-Description' => 'Nombre común',
 
-	'Core:AttributeTag' => 'Etiquetas',
-	'Core:AttributeTag+' => 'Tags~~',
-	
-	'Core:Context=REST/JSON' => 'REST~~',
-	'Core:Context=Synchro' => 'Synchro~~',
-	'Core:Context=Setup' => 'Setup~~',
-	'Core:Context=GUI:Console' => 'Console~~',
-	'Core:Context=CRON' => 'cron~~',
-	'Core:Context=GUI:Portal' => 'Portal~~',
+	'Core:AttributeTag'  => 'Etiquetas',
+	'Core:AttributeTag+' => '',
+
+	'Core:Context=REST/JSON'   => 'REST',
+	'Core:Context=Synchro'     => 'Synchro',
+	'Core:Context=Setup'       => 'Configuración',
+	'Core:Context=GUI:Console' => 'Consola',
+	'Core:Context=CRON'        => 'cron',
+	'Core:Context=GUI:Portal'  => 'Portal',
 ));
 
 
@@ -224,7 +225,7 @@ Operadores:<br/>
 // Class: CMDBChange
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChange' => 'Cambio',
 	'Class:CMDBChange+' => 'Cambios',
 	'Class:CMDBChange/Attribute:date' => 'Fecha',
@@ -245,7 +246,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: CMDBChangeOp
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChangeOp' => 'Operación de Cambios',
 	'Class:CMDBChangeOp+' => 'Operación de Cambios',
 	'Class:CMDBChangeOp/Attribute:change' => 'Cambio',
@@ -266,7 +267,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: CMDBChangeOpCreate
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChangeOpCreate' => 'Creación de Objeto',
 	'Class:CMDBChangeOpCreate+' => 'Creación de Objeto',
 ));
@@ -275,7 +276,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: CMDBChangeOpDelete
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChangeOpDelete' => 'Borrado de Objeto',
 	'Class:CMDBChangeOpDelete+' => 'Borrado de Objeto',
 ));
@@ -284,7 +285,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: CMDBChangeOpSetAttribute
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChangeOpSetAttribute' => 'Cambio en Objeto',
 	'Class:CMDBChangeOpSetAttribute+' => 'Cambio en Objeto',
 	'Class:CMDBChangeOpSetAttribute/Attribute:attcode' => 'Atributo',
@@ -295,7 +296,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: CMDBChangeOpSetAttributeScalar
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChangeOpSetAttributeScalar' => 'Cambio de Propiedad',
 	'Class:CMDBChangeOpSetAttributeScalar+' => 'Cambio de Propiedades escalares del Objeto',
 	'Class:CMDBChangeOpSetAttributeScalar/Attribute:oldvalue' => 'Valor Anterior',
@@ -304,7 +305,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 	'Class:CMDBChangeOpSetAttributeScalar/Attribute:newvalue+' => 'Nuevo Valor del Atributo',
 ));
 // Used by CMDBChangeOp... & derived classes
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Change:ObjectCreated' => 'Objeto Creado',
 	'Change:ObjectDeleted' => 'Objeto Eliminado',
 	'Change:ObjectModified' => 'Objeto Modificado',
@@ -327,7 +328,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: CMDBChangeOpSetAttributeBlob
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChangeOpSetAttributeBlob' => 'Cambio de Datos',
 	'Class:CMDBChangeOpSetAttributeBlob+' => 'Cambio de Datos',
 	'Class:CMDBChangeOpSetAttributeBlob/Attribute:prevdata' => 'Valor Anterior',
@@ -338,7 +339,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: CMDBChangeOpSetAttributeText
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:CMDBChangeOpSetAttributeText' => 'Cambio de Texto',
 	'Class:CMDBChangeOpSetAttributeText+' => 'Cambio de Texto',
 	'Class:CMDBChangeOpSetAttributeText/Attribute:prevdata' => 'Valor Anterior',
@@ -349,7 +350,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: Event
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:Event' => 'Bitácora de Eventos',
 	'Class:Event+' => 'Evento interno de aplicación',
 	'Class:Event/Attribute:message' => 'Mensaje',
@@ -366,7 +367,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: EventNotification
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:EventNotification' => 'Notificación de Evento',
 	'Class:EventNotification+' => 'Notificación de Evento',
 	'Class:EventNotification/Attribute:trigger_id' => 'Disparador',
@@ -381,7 +382,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: EventNotificationEmail
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:EventNotificationEmail' => 'Correo Electrónico de Notificación de Evento',
 	'Class:EventNotificationEmail+' => 'Correo Electrónico de Notificación de Evento',
 	'Class:EventNotificationEmail/Attribute:to' => 'Para',
@@ -404,7 +405,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: EventIssue
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:EventIssue' => 'Registro de Evento',
 	'Class:EventIssue+' => 'Evidencia de un evento (warning, error, etc.)',
 	'Class:EventIssue/Attribute:issue' => 'Evento',
@@ -427,7 +428,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: EventWebService
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:EventWebService' => 'Evento de WebService',
 	'Class:EventWebService+' => 'Evidencia de una llamada de servicio Web',
 	'Class:EventWebService/Attribute:verb' => 'Verbo',
@@ -444,7 +445,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 	'Class:EventWebService/Attribute:data+' => 'Datos de Resultado',
 ));
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:EventRestService' => 'Llamada REST/JSON',
 	'Class:EventRestService+' => 'Traza de llamada a servicio REST/JSON',
 	'Class:EventRestService/Attribute:operation' => 'Operación',
@@ -465,7 +466,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: EventLoginUsage
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:EventLoginUsage' => 'Uso de la Cuenta',
 	'Class:EventLoginUsage+' => 'Uso de la Cuenta',
 	'Class:EventLoginUsage/Attribute:user_id' => 'Usuario',
@@ -480,7 +481,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: Action
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:Action' => 'Acción Personalizada',
 	'Class:Action+' => 'Acción definida por el usuario',
 	'Class:Action/Attribute:name' => 'Nombre',
@@ -505,7 +506,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: ActionNotification
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:ActionNotification' => 'Notificación',
 	'Class:ActionNotification+' => 'Notificación (resúmen)',
 ));
@@ -514,7 +515,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: ActionEmail
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:ActionEmail' => 'Notificación por Correo Electrónico',
 	'Class:ActionEmail+' => 'Notificación por Correo Electrónico',
 	'Class:ActionEmail/Attribute:status+' => 'This status drives who will be notified: just the Test recipient, all (To, cc and Bcc) or no-one~~',
@@ -555,24 +556,24 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: Trigger
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
-	'Class:Trigger' => 'Disparador',
-	'Class:Trigger+' => 'Disparador',
-	'Class:Trigger/Attribute:description' => 'Descripción',
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
+	'Class:Trigger'                        => 'Disparador',
+	'Class:Trigger+'                       => 'Disparador',
+	'Class:Trigger/Attribute:description'  => 'Descripción',
 	'Class:Trigger/Attribute:description+' => 'Descripción',
-	'Class:Trigger/Attribute:action_list' => 'Acciones',
+	'Class:Trigger/Attribute:action_list'  => 'Acciones',
 	'Class:Trigger/Attribute:action_list+' => 'Acciones realizadas cuando se activó el disparador',
-	'Class:Trigger/Attribute:finalclass' => 'Clase',
-	'Class:Trigger/Attribute:finalclass+' => 'Clase',
-	'Class:Trigger/Attribute:context' => 'Context~~',
-	'Class:Trigger/Attribute:context+' => 'Context to allow the trigger to start~~',
+	'Class:Trigger/Attribute:finalclass'   => 'Clase',
+	'Class:Trigger/Attribute:finalclass+'  => 'Clase',
+	'Class:Trigger/Attribute:context'      => 'Contexto',
+	'Class:Trigger/Attribute:context+'     => 'Contexto para permitir el inicio del disparador',
 ));
 
 //
 // Class: TriggerOnObject
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnObject' => 'Disparador (Depende de la clase)',
 	'Class:TriggerOnObject+' => 'Disparador en una clase de objeto dada',
 	'Class:TriggerOnObject/Attribute:target_class' => 'Clase destino',
@@ -587,7 +588,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnPortalUpdate
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnPortalUpdate' => 'Disparador (cuando se actualiza desde el portal)',
 	'Class:TriggerOnPortalUpdate+' => 'Disparador cuando un usuario actualiza desde el portal',
 ));
@@ -596,7 +597,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnStateChange
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnStateChange' => 'Disparador (en cambio de estado)',
 	'Class:TriggerOnStateChange+' => 'Disparador en cambio de estado de objeto',
 	'Class:TriggerOnStateChange/Attribute:state' => 'Estado',
@@ -607,7 +608,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnStateEnter
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnStateEnter' => 'Disparador (entrando a un estado)',
 	'Class:TriggerOnStateEnter+' => 'Disparador en cambio de estado de objeto - entrando',
 ));
@@ -616,7 +617,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnStateLeave
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnStateLeave' => 'Disparador (saliendo de un estado)',
 	'Class:TriggerOnStateLeave+' => 'Disparador en cambio de estado de objeto - saliendo',
 ));
@@ -625,7 +626,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnObjectCreate
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnObjectCreate' => 'Disparador (creación de objeto)',
 	'Class:TriggerOnObjectCreate+' => 'Disparador en la creación de objeto (hija de clase) de una clase dada',
 ));
@@ -634,7 +635,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnObjectDelete
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnObjectDelete' => 'Disparador (eliminando un objecto)',
 	'Class:TriggerOnObjectDelete+' => 'Disparador al eliminar un objecto de la clase dada [o una clase hija] ',
 ));
@@ -643,7 +644,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnObjectUpdate
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnObjectUpdate' => 'Disparador (actualizando un objecto)',
 	'Class:TriggerOnObjectUpdate+' => 'Disparador al actualizar un objeto de la clase dada [o una clase hija]',
 	'Class:TriggerOnObjectUpdate/Attribute:target_attcodes' => 'Campos objetivo',
@@ -654,7 +655,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnObjectMention
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnObjectMention' => 'Trigger (on object mention)~~',
 	'Class:TriggerOnObjectMention+' => 'Trigger on mention (@xxx) of an object of [a child class of] the given class in a log attribute~~',
 	'Class:TriggerOnObjectMention/Attribute:mentioned_filter' => 'Mentioned filter~~',
@@ -665,7 +666,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: TriggerOnThresholdReached
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:TriggerOnThresholdReached' => 'Disparador (en umbral)',
 	'Class:TriggerOnThresholdReached+' => 'Disparador en umbral Stop-Watch alcanzado',
 	'Class:TriggerOnThresholdReached/Attribute:stop_watch_code' => 'Detener watch',
@@ -678,7 +679,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 // Class: lnkTriggerAction
 //
 
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:lnkTriggerAction' => 'Relación Acción y Disparador',
 	'Class:lnkTriggerAction+' => 'Relación Acción y Disparador',
 	'Class:lnkTriggerAction/Attribute:action_id' => 'Acción',
@@ -696,7 +697,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 //
 // Synchro Data Source
 //
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:SynchroDataSource/Attribute:name' => 'Nombre',
 	'Class:SynchroDataSource/Attribute:name+' => 'Nombre de la Fuente de Datos',
 	'Class:SynchroDataSource/Attribute:description' => 'Descripción',
@@ -944,80 +945,80 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 	'Core:BulkExport:PDFPageOrientation' => 'Orientación de la Página:',
 	'Core:BulkExport:PageOrientation-L' => 'Horizontal',
 	'Core:BulkExport:PageOrientation-P' => 'Vertical',
-	'Core:BulkExport:XMLFormat' => 'Archivo XML (*.xml)',
-	'Core:BulkExport:XMLOptions' => 'Opciones XML',
-	'Core:BulkExport:SpreadsheetFormat' => 'Formato Tabla HTML (*.html)',
-	'Core:BulkExport:SpreadsheetOptions' => 'Opciones de Tabla',
-	'Core:BulkExport:OptionNoLocalize' => 'Código de exportación en lugar de etiqueta',
-	'Core:BulkExport:OptionLinkSets' => 'Incluir objetos ligados',
-	'Core:BulkExport:OptionFormattedText' => 'Conservar formato de texto',
-	'Core:BulkExport:ScopeDefinition' => 'Definición de los objetos a exportar',
-	'Core:BulkExportLabelOQLExpression' => 'Consulta OQL:',
-	'Core:BulkExportLabelPhrasebookEntry' => 'Entrada Consulta de Libreta de Consultas:',
-	'Core:BulkExportMessageEmptyOQL' => 'Por favor ingrese una consulta OQL válida.',
-	'Core:BulkExportMessageEmptyPhrasebookEntry' => 'Por favor seleccione un entrada válida de la libreta de consultas.',
-	'Core:BulkExportQueryPlaceholder' => 'Escriba una consulta OQL aquí...',
-	'Core:BulkExportCanRunNonInteractive' => 'Click aquí para ejecutar la exportación en modo no interactivo.',
-	'Core:BulkExportLegacyExport' => 'Click aquí para acceder a la exportación tradicional.',
-	'Core:BulkExport:XLSXOptions' => 'Opciones Excel',
-	'Core:BulkExport:TextFormat' => 'Compos texto conteniendo algunas marcas HTML',
-	'Core:BulkExport:DateTimeFormat' => 'Formato de fecha y hora',
+	'Core:BulkExport:XMLFormat'                     => 'Archivo XML (*.xml)',
+	'Core:BulkExport:XMLOptions'                    => 'Opciones XML',
+	'Core:BulkExport:SpreadsheetFormat'             => 'Formato Tabla HTML (*.html)',
+	'Core:BulkExport:SpreadsheetOptions'            => 'Opciones de Tabla',
+	'Core:BulkExport:OptionNoLocalize'              => 'Código de exportación en lugar de etiqueta',
+	'Core:BulkExport:OptionLinkSets'                => 'Incluir objetos ligados',
+	'Core:BulkExport:OptionFormattedText'           => 'Conservar formato de texto',
+	'Core:BulkExport:ScopeDefinition'               => 'Definición de los objetos a exportar',
+	'Core:BulkExportLabelOQLExpression'             => 'Consulta OQL:',
+	'Core:BulkExportLabelPhrasebookEntry'           => 'Entrada Consulta de Libreta de Consultas:',
+	'Core:BulkExportMessageEmptyOQL'                => 'Por favor ingrese una consulta OQL válida.',
+	'Core:BulkExportMessageEmptyPhrasebookEntry'    => 'Por favor seleccione un entrada válida de la libreta de consultas.',
+	'Core:BulkExportQueryPlaceholder'               => 'Escriba una consulta OQL aquí...',
+	'Core:BulkExportCanRunNonInteractive'           => 'Click aquí para ejecutar la exportación en modo no interactivo.',
+	'Core:BulkExportLegacyExport'                   => 'Click aquí para acceder a la exportación tradicional.',
+	'Core:BulkExport:XLSXOptions'                   => 'Opciones Excel',
+	'Core:BulkExport:TextFormat'                    => 'Compos texto conteniendo algunas marcas HTML',
+	'Core:BulkExport:DateTimeFormat'                => 'Formato de fecha y hora',
 	'Core:BulkExport:DateTimeFormatDefault_Example' => 'Formato por omisión (%1$s), ej. %2$s',
-	'Core:BulkExport:DateTimeFormatCustom_Format' => 'Formato personalizado: %1$s',
-	'Core:BulkExport:PDF:PageNumber' => 'Page %1$s~~',
-	'Core:DateTime:Placeholder_d' => 'DD', // Day of the month: 2 digits (with leading zero)
-	'Core:DateTime:Placeholder_j' => 'D', // Day of the month: 1 or 2 digits (without leading zero)
-	'Core:DateTime:Placeholder_m' => 'MM', // Month on 2 digits i.e. 01-12
-	'Core:DateTime:Placeholder_n' => 'M', // Month on 1 or 2 digits 1-12
-	'Core:DateTime:Placeholder_Y' => 'AAAA', // Year on 4 digits
-	'Core:DateTime:Placeholder_y' => 'AA', // Year on 2 digits
-	'Core:DateTime:Placeholder_H' => 'hh', // Hour 00..23
-	'Core:DateTime:Placeholder_h' => 'h', // Hour 01..12
-	'Core:DateTime:Placeholder_G' => 'hh', // Hour 0..23
-	'Core:DateTime:Placeholder_g' => 'h', // Hour 1..12
-	'Core:DateTime:Placeholder_a' => 'am/pm', // am/pm (lowercase)
-	'Core:DateTime:Placeholder_A' => 'AM/PM', // AM/PM (uppercase)
-	'Core:DateTime:Placeholder_i' => 'mm', // minutes, 2 digits: 00..59
-	'Core:DateTime:Placeholder_s' => 'ss', // seconds, 2 digits 00..59
-	'Core:Validator:Default' => 'Formato incorrecto',
-	'Core:Validator:Mandatory' => 'Por favor, ingrese este campo',
-	'Core:Validator:MustBeInteger' => 'Debe ser un entero',
-	'Core:Validator:MustSelectOne' => 'Por favor, seleccione uno',
+	'Core:BulkExport:DateTimeFormatCustom_Format'   => 'Formato personalizado: %1$s',
+	'Core:BulkExport:PDF:PageNumber'                => 'Página %1$s',
+	'Core:DateTime:Placeholder_d'                   => 'DD', // Day of the month: 2 digits (with leading zero)
+	'Core:DateTime:Placeholder_j'                   => 'D', // Day of the month: 1 or 2 digits (without leading zero)
+	'Core:DateTime:Placeholder_m'                   => 'MM', // Month on 2 digits i.e. 01-12
+	'Core:DateTime:Placeholder_n'                   => 'M', // Month on 1 or 2 digits 1-12
+	'Core:DateTime:Placeholder_Y'                   => 'AAAA', // Year on 4 digits
+	'Core:DateTime:Placeholder_y'                   => 'AA', // Year on 2 digits
+	'Core:DateTime:Placeholder_H'                   => 'hh', // Hour 00..23
+	'Core:DateTime:Placeholder_h'                   => 'h', // Hour 01..12
+	'Core:DateTime:Placeholder_G'                   => 'hh', // Hour 0..23
+	'Core:DateTime:Placeholder_g'                   => 'h', // Hour 1..12
+	'Core:DateTime:Placeholder_a'                   => 'am/pm', // am/pm (lowercase)
+	'Core:DateTime:Placeholder_A'                   => 'AM/PM', // AM/PM (uppercase)
+	'Core:DateTime:Placeholder_i'                   => 'mm', // minutes, 2 digits: 00..59
+	'Core:DateTime:Placeholder_s'                   => 'ss', // seconds, 2 digits 00..59
+	'Core:Validator:Default'                        => 'Formato incorrecto',
+	'Core:Validator:Mandatory'                      => 'Por favor, ingrese este campo',
+	'Core:Validator:MustBeInteger'                  => 'Debe ser un entero',
+	'Core:Validator:MustSelectOne'                  => 'Por favor, seleccione uno',
 ));
 
 //
 // Class: TagSetFieldData
 //
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
-	'Class:TagSetFieldData' => '%2$s para la clase %1$s',
-	'Class:TagSetFieldData+' => '~~',
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
+	'Class:TagSetFieldData'  => '%2$s para la clase %1$s',
+	'Class:TagSetFieldData+' => 'Datos de campo',
 
-	'Class:TagSetFieldData/Attribute:code' => 'Código',
-	'Class:TagSetFieldData/Attribute:code+' => 'Código interno. Debe contener al menos tres caracteres alfanuméricos',
-	'Class:TagSetFieldData/Attribute:label' => 'Etiqueta',
-	'Class:TagSetFieldData/Attribute:label+' => 'Etiqueta mostrada',
-	'Class:TagSetFieldData/Attribute:description' => 'Descripción',
+	'Class:TagSetFieldData/Attribute:code'         => 'Código',
+	'Class:TagSetFieldData/Attribute:code+'        => 'Código interno. Debe contener al menos tres caracteres alfanuméricos',
+	'Class:TagSetFieldData/Attribute:label'        => 'Etiqueta',
+	'Class:TagSetFieldData/Attribute:label+'       => 'Etiqueta mostrada',
+	'Class:TagSetFieldData/Attribute:description'  => 'Descripción',
 	'Class:TagSetFieldData/Attribute:description+' => 'Descripción de la etiqueta',
-	'Class:TagSetFieldData/Attribute:finalclass' => 'Clase',
-	'Class:TagSetFieldData/Attribute:obj_class' => 'Clase de objeto',
-	'Class:TagSetFieldData/Attribute:obj_attcode' => 'Código de campo',
+	'Class:TagSetFieldData/Attribute:finalclass'   => 'Clase',
+	'Class:TagSetFieldData/Attribute:obj_class'    => 'Clase de objeto',
+	'Class:TagSetFieldData/Attribute:obj_attcode'  => 'Código de campo',
 
-	'Core:TagSetFieldData:ErrorDeleteUsedTag' => 'Etiquetas es uso no pueden ser borradas',
+	'Core:TagSetFieldData:ErrorDeleteUsedTag'           => 'Etiquetas es uso no pueden ser borradas',
 	'Core:TagSetFieldData:ErrorDuplicateTagCodeOrLabel' => 'Los códigos o las etiquetas deben ser únicos',
-	'Core:TagSetFieldData:ErrorTagCodeSyntax' => 'El código de la etiqueta debe contener entre 3 y %1$d caracteres alfanuméricos',
-	'Core:TagSetFieldData:ErrorTagCodeReservedWord' => 'El código elegido es una palabra reservada',
-	'Core:TagSetFieldData:ErrorTagLabelSyntax' => 'La etiqueta no odebe contener \'%1$s\' y no puede estar vacía',
-	'Core:TagSetFieldData:ErrorCodeUpdateNotAllowed' => 'Códigos de etiqueta en uso no pueden ser borrados',
-	'Core:TagSetFieldData:ErrorClassUpdateNotAllowed' => 'Tags "Object Class" cannot be changed~~',
-	'Core:TagSetFieldData:ErrorAttCodeUpdateNotAllowed' => 'Tags "Attribute Code" cannot be changed~~',
-	'Core:TagSetFieldData:WhereIsThisTagTab' => 'Uso de la etiqueta (%1$d)~~',
-	'Core:TagSetFieldData:NoEntryFound' => 'No hay entradas para esta etiqueta',
+	'Core:TagSetFieldData:ErrorTagCodeSyntax'           => 'El código de la etiqueta debe contener entre 3 y %1$d caracteres alfanuméricos',
+	'Core:TagSetFieldData:ErrorTagCodeReservedWord'     => 'El código elegido es una palabra reservada',
+	'Core:TagSetFieldData:ErrorTagLabelSyntax'          => 'La etiqueta no odebe contener \'%1$s\' y no puede estar vacía',
+	'Core:TagSetFieldData:ErrorCodeUpdateNotAllowed'    => 'Códigos de etiqueta en uso no pueden ser borrados',
+	'Core:TagSetFieldData:ErrorClassUpdateNotAllowed'   => 'Etiquetas "Object Class" no pueden ser cambiadas',
+	'Core:TagSetFieldData:ErrorAttCodeUpdateNotAllowed' => 'Etiquetas "Attribute Code" no pueden ser cambiadas',
+	'Core:TagSetFieldData:WhereIsThisTagTab'            => 'Uso de la etiqueta (%1$d)',
+	'Core:TagSetFieldData:NoEntryFound'                 => 'No hay entradas para esta etiqueta',
 ));
 
 //
 // Class: DBProperty
 //
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:DBProperty' => 'Propiedad BD',
 	'Class:DBProperty+' => 'Propiedad de Base de Datos',
 	'Class:DBProperty/Attribute:name' => 'Nombre',
@@ -1035,7 +1036,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 //
 // Class: BackgroundTask
 //
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:BackgroundTask' => 'Tarea en Segundo Plano',
 	'Class:BackgroundTask+' => 'Tarea en Segundo Plano',
 	'Class:BackgroundTask/Attribute:class_name' => 'Nombre de Clase',
@@ -1065,7 +1066,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 //
 // Class: AsyncTask
 //
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:AsyncTask' => 'Tarea Asíncrona',
 	'Class:AsyncTask+' => 'Tarea Asíncrona',
 	'Class:AsyncTask/Attribute:created' => 'Creado',
@@ -1093,38 +1094,31 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
 //
 // Class: AbstractResource
 //
-
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:AbstractResource' => 'Recurso abstracto',
-	'Class:AbstractResource+' => '~~',
+	'Class:AbstractResource+' => '',
 ));
 
 //
 // Class: ResourceAdminMenu
 //
-
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:ResourceAdminMenu' => 'Recursos de Menú de Administración',
-	'Class:ResourceAdminMenu+' => '~~',
+	'Class:ResourceAdminMenu+' => '',
 ));
 
 //
 // Class: ResourceRunQueriesMenu
 //
-
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:ResourceRunQueriesMenu' => 'Recurso Libreta de Consultas',
-	'Class:ResourceRunQueriesMenu+' => '~~',
+	'Class:ResourceRunQueriesMenu+' => '',
 ));
 
 //
 // Class: Action
 //
-
-Dict::Add('ES CR', 'Spanish', 'Español, Castellaño', array(
+Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:ResourceSystemMenu' => 'Recurso Menú de Sistema',
-	'Class:ResourceSystemMenu+' => '~~',
+	'Class:ResourceSystemMenu+' => '',
 ));
-
-
-

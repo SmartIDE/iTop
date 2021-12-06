@@ -9,6 +9,7 @@ $ibo-search-form-panel--body--padding-top: 18px !default;
 $ibo-search-form-panel--body--padding-bottom: 10px !default;
 $ibo-search-form-panel--body--padding-x: 14px !default;
 
+$ibo-search-form-panel--criteria--margin-bottom: 5px !default;
 $ibo-search-form-panel--criteria--color: $ibo-color-grey-900 !default;
 $ibo-search-form-panel--criteria--background-color: $ibo-color-white-200 !default;
 $ibo-search-form-panel--criteria--border-color: $ibo-color-grey-300 !default;
@@ -18,6 +19,10 @@ $ibo-search-form-panel--more-criteria--color: $ibo-color-blue-grey-800 !default;
 $ibo-search-form-panel--more-criteria--background-color: $ibo-color-white-100 !default;
 $ibo-search-form-panel--more-criteria--icon--color: $ibo-color-primary-600 !default;
 $ibo-search-form-panel--more-criteria--border-color: $ibo-search-form-panel--criteria--border-color !default;
+
+$ibo-search-form-panel--items--hover--color: $ibo-color-grey-200 !default;
+
+$ibo-search-form-panel--multiple-choice--hover--color: $ibo-color-grey-200 !default;
 
 $ibo-search-form-panel--misc-button--background-color: $ibo-search-form-panel--more-criteria--background-color !default;
 $ibo-search-form-panel--misc-button--icon--color: $ibo-search-form-panel--more-criteria--icon--color !default;
@@ -198,7 +203,8 @@ $ibo-search-results-area--datatable-scrollhead--border--is-sticking: $ibo-search
 			position: relative;
 			display: inline-block;
 			margin-right: 10px;
-			margin-bottom: 5px;
+			margin-top: 3px;
+			margin-bottom: 3px; /* Bottom spacing (6px) for next criteria line is actually splitted between top and bottom margin in order to center the criteria within the container. The cumulated margins fo the lines will do the trick. */
 			vertical-align: top;
 
 			&.opened {
@@ -423,7 +429,7 @@ $ibo-search-results-area--datatable-scrollhead--border--is-sticking: $ibo-search
 											padding: 4px 8px; /* Putting back the padding remove by .sfc_opc_mc_items */
 
 											&:hover {
-												background-color: $ibo-color-grey-200;
+												background-color: $ibo-search-form-panel--multiple-choice--hover--color;
 											}
 
 											label {
@@ -687,7 +693,7 @@ $ibo-search-results-area--datatable-scrollhead--border--is-sticking: $ibo-search
 					.sfl_items {
 						> li {
 							&:hover {
-								background-color: $ibo-color-grey-200;
+								background-color: $ibo-search-form-panel--items--hover--color;
 							}
 						}
 					}
@@ -746,7 +752,7 @@ $ibo-search-results-area--datatable-scrollhead--border--is-sticking: $ibo-search
 				white-space: nowrap;
 
 				&:hover {
-					background-color: $ibo-color-white-100;
+					background-color: $ibo-search-form-panel--items--hover--color;
 				}
 
 				&.sfl_i_placeholder {
@@ -869,9 +875,6 @@ $ibo-search-results-area--datatable-scrollhead--border--is-sticking: $ibo-search
 }
 #ibo-main-content .search_form_handler .sf_criterion_area{
 	padding: 0;
-}
-.ibo-search-form{
-	padding-top: $ibo-panel--spacing-top ;
 }
 
 .sfm_tg_title{

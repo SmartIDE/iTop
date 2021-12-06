@@ -5,7 +5,7 @@
 
 /* SCSS variables */
 $ibo-field--sibling-spacing: 16px !default;
-$ibo-field--value--color: $ibo-color-grey-700 !default;
+$ibo-field--value--color: $ibo-color-grey-800 !default;
 
 $ibo-field--label--description--content: "?" !default;
 $ibo-field--label--description--padding-left: 4px !default;
@@ -165,6 +165,7 @@ $ibo-field--enable-bulk--checkbox--margin-left: 8px !default;
   min-width: 100px;
   max-width: 145px;
   width: 30%;
+  word-break: break-word; /* We want labels to wrap if it is very long if it has no spaces */
   @extend %ibo-font-weight-600;
 
   > .ibo-has-description {
@@ -190,10 +191,17 @@ $ibo-field--enable-bulk--checkbox--margin-left: 8px !default;
   /* Note that along with with, we now display a "expand" icon on large fields so we can have a better view of its content */
   .HTML {
     @extend .ibo-vendors-ckeditor--display-content;
+    display: grid;
 
     table {
       table-layout: fixed;
       width: 100%;
+
+      /* N°2788 - Force table to wrap as much as they can in the object details, otherwise it overflows on the other columns. We do this terrible hack only here as this is due to how the columns / fieldsets works. We might have the opportunity to improve it one day. */
+      * {
+        white-space: break-spaces;
+        word-break: break-all;
+      }
     }
   }
 }
@@ -204,7 +212,7 @@ $ibo-field--enable-bulk--checkbox--margin-left: 8px !default;
 
 /* For log fields in the bulk operation screens */
 .ibo-fieldset-legend > .ibo-field--comments {
-  display: contents;
+//  display: contents;
   padding-bottom: $ibo-field--value--margin-top--for-large;
   font-size: $ibo-field--comments--font-size;
 }

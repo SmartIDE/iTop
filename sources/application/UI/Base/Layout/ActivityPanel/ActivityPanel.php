@@ -62,11 +62,11 @@ class ActivityPanel extends UIBlock
 	/** @var \DBObject $oObject The object for which the activity panel is for */
 	protected $oObject;
 	/**
-	 * @see \cmdbAbstractObject::ENUM_OBJECT_MODE_XXX
+	 * @see \cmdbAbstractObject::ENUM_DISPLAY_MODE_XXX
 	 * @var string $sObjectMode Display mode of $oObject (create, edit, view, ...)
 	 */
 	protected $sObjectMode;
-	/** @var null|string $sTransactionId Only when $sObjectMode is set to \cmdbAbstractObject::ENUM_OBJECT_MODE_VIEW */
+	/** @var null|string $sTransactionId Only when $sObjectMode is set to \cmdbAbstractObject::ENUM_DISPLAY_MODE_VIEW */
 	protected $sTransactionId;
 	/** @var array $aCaseLogs Metadata of the case logs (att. code, color, ...), will be use to make the tabs and identify them easily */
 	protected $aCaseLogs;
@@ -107,7 +107,7 @@ class ActivityPanel extends UIBlock
 		$this->InitializeCaseLogTabs();
 		$this->InitializeCaseLogTabsEntryForms();
 		$this->InitializeComposeMenu();
-		$this->SetObjectMode(cmdbAbstractObject::DEFAULT_OBJECT_MODE);
+		$this->SetObjectMode(cmdbAbstractObject::DEFAULT_DISPLAY_MODE);
 		$this->SetObject($oObject);
 		$this->SetEntries($aEntries);
 		$this->bAreEntriesSorted = false;
@@ -184,7 +184,7 @@ class ActivityPanel extends UIBlock
 	 * Set the display mode of the $oObject
 	 *
 	 * @param string $sMode
-	 * @see cmdbAbstractObject::ENUM_OBJECT_MODE_XXX
+	 * @see cmdbAbstractObject::ENUM_DISPLAY_MODE_XXX
 	 *
 	 * @return $this
 	 * @throws \Exception
@@ -192,8 +192,8 @@ class ActivityPanel extends UIBlock
 	public function SetObjectMode(string $sMode)
 	{
 		// Consistency check
-		if(!in_array($sMode, cmdbAbstractObject::EnumObjectModes())){
-			throw new Exception("Activity panel: Object mode '$sMode' not allowed, should be either ".implode(' / ', cmdbAbstractObject::EnumObjectModes()));
+		if(!in_array($sMode, cmdbAbstractObject::EnumDisplayModes())){
+			throw new Exception("Activity panel: Object mode '$sMode' not allowed, should be either ".implode(' / ', cmdbAbstractObject::EnumDisplayModes()));
 		}
 
 		$this->sObjectMode = $sMode;
@@ -204,7 +204,7 @@ class ActivityPanel extends UIBlock
 	/**
 	 * Return the display mode of the $oObject
 	 *
-	 * @see cmdbAbstractObject::ENUM_OBJECT_MODE_XXX
+	 * @see cmdbAbstractObject::ENUM_DISPLAY_MODE_XXX
 	 * @return string
 	 */
 	public function GetObjectMode(): string
@@ -260,13 +260,13 @@ class ActivityPanel extends UIBlock
 
 	/**
 	 * @return bool True if the lock mechanism has to be enabled
-	 * @uses \cmdbAbstractObject::ENUM_OBJECT_MODE_VIEW
+	 * @uses \cmdbAbstractObject::ENUM_DISPLAY_MODE_VIEW
 	 * @uses static::HasAnEditableCaseLogTab()
 	 * @uses "concurrent_lock_enabled" config. param.
 	 */
 	public function IsLockEnabled(): bool
 	{
-		return (cmdbAbstractObject::ENUM_OBJECT_MODE_VIEW === $this->sObjectMode) && (MetaModel::GetConfig()->Get('concurrent_lock_enabled')) && (true === $this->HasAnEditableCaseLogTab());
+		return (cmdbAbstractObject::ENUM_DISPLAY_MODE_VIEW === $this->sObjectMode) && (MetaModel::GetConfig()->Get('concurrent_lock_enabled')) && (true === $this->HasAnEditableCaseLogTab());
 	}
 
 	/**
@@ -295,7 +295,7 @@ class ActivityPanel extends UIBlock
 	 *
 	 * @return ActivityEntry[]
 	 */
-	public function GetEntries()
+	public function GetEntries(): array
 	{
 		if ($this->bAreEntriesSorted === false)
 		{
@@ -311,7 +311,7 @@ class ActivityPanel extends UIBlock
 	 *
 	 * @return array
 	 */
-	public function GetGroupedEntries()
+	public function GetGroupedEntries(): array
 	{
 		$aGroupedEntries = [];
 
@@ -462,7 +462,7 @@ class ActivityPanel extends UIBlock
 	 *
 	 * @return bool
 	 */
-	public function HasEntries()
+	public function HasEntries(): bool
 	{
 		return !empty($this->aEntries);
 	}
@@ -518,7 +518,7 @@ class ActivityPanel extends UIBlock
 	 *
 	 * @return array
 	 */
-	public function GetCaseLogTabs()
+	public function GetCaseLogTabs(): array
 	{
 		return $this->aCaseLogs;
 	}
@@ -567,8 +567,8 @@ class ActivityPanel extends UIBlock
 				// - There is a least 1 *writable* case log
 				// - And object is in view mode (in edit mode, it will be handled by the general form)
 				// Otherwise we generate unnecessary transaction IDs that could saturate the system
-				if ((false === $bIsReadOnly) && (false === $this->HasTransactionId()) && (cmdbAbstractObject::ENUM_OBJECT_MODE_VIEW === $this->sObjectMode)) {
-					$this->sTransactionId = (cmdbAbstractObject::ENUM_OBJECT_MODE_VIEW === $this->sObjectMode) ? utils::GetNewTransactionId() : null;
+				if ((false === $bIsReadOnly) && (false === $this->HasTransactionId()) && (cmdbAbstractObject::ENUM_DISPLAY_MODE_VIEW === $this->sObjectMode)) {
+					$this->sTransactionId = (cmdbAbstractObject::ENUM_DISPLAY_MODE_VIEW === $this->sObjectMode) ? utils::GetNewTransactionId() : null;
 				}
 
 				// Add log to compose button menu only if it is editable
@@ -611,7 +611,7 @@ class ActivityPanel extends UIBlock
 	 *
 	 * @return bool
 	 */
-	public function HasCaseLogTab(string $sAttCode)
+	public function HasCaseLogTab(string $sAttCode): bool
 	{
 		return isset($this->aCaseLogs[$sAttCode]);
 	}
@@ -621,7 +621,7 @@ class ActivityPanel extends UIBlock
 	 *
 	 * @return bool
 	 */
-	public function HasCaseLogTabs()
+	public function HasCaseLogTabs(): bool
 	{
 		return !empty($this->aCaseLogs);
 	}
@@ -811,7 +811,7 @@ class ActivityPanel extends UIBlock
 	 *
 	 * @return string
 	 */
-	public function GetDateTimeFormatForJSWidget()
+	public function GetDateTimeFormatForJSWidget(): string
 	{
 		$oDateTimeFormat = AttributeDateTime::GetFormat();
 
@@ -848,7 +848,7 @@ class ActivityPanel extends UIBlock
 	/**
 	 * @inheritdoc
 	 */
-	public function GetSubBlocks()
+	public function GetSubBlocks(): array
 	{
 		$aSubBlocks = array();
 

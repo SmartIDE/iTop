@@ -18,7 +18,7 @@
                 oFavoriteButton[0].click();
             }
             else{
-                let oPopupItemButton = $('[data-role="ibo-popover-menu"]').find('[data-uid="UI:Menu:Modify"]');
+                let oPopupItemButton = $('[data-role="ibo-popover-menu"]').find('[data-resource-id="UI:Menu:Modify"]');
                 if(oPopupItemButton[0]){
                     oPopupItemButton[0].click();
                 }
@@ -31,7 +31,7 @@
                 oFavoriteButton[0].click();
             }
             else{
-                let oPopupItemButton = $('[data-role="ibo-popover-menu"]').find('[data-uid="UI:Menu:Delete"]');
+                let oPopupItemButton = $('[data-role="ibo-popover-menu"]').find('[data-resource-id="UI:Menu:Delete"]');
                 if(oPopupItemButton[0]){
                     oPopupItemButton[0].click();
                 }
@@ -44,17 +44,17 @@
                 oFavoriteButton[0].click();
             }
             else{
-                let oPopupItemButton = $('[data-role="ibo-popover-menu"]').find('[data-uid="UI:Menu:New"]');
+                let oPopupItemButton = $('[data-role="ibo-popover-menu"]').find('[data-resource-id="UI:Menu:New"]');
                 if(oPopupItemButton[0]){
                     oPopupItemButton[0].click();
                 }
             }
         });
-        {% if oUIBlock.GetObjectMode() == constant('cmdbAbstractObject::ENUM_OBJECT_MODE_EDIT') or oUIBlock.GetObjectMode() == constant('cmdbAbstractObject::ENUM_OBJECT_MODE_CREATE') %}
+        {% if oUIBlock.GetObjectMode() == constant('cmdbAbstractObject::ENUM_DISPLAY_MODE_EDIT') or oUIBlock.GetObjectMode() == constant('cmdbAbstractObject::ENUM_DISPLAY_MODE_CREATE') %}
             $('#{{ oUIBlock.GetId() }}').on('save_object', function(){
                 $(this).find('button[type="submit"][name=""][value=""]').click();
             });
-        {% elseif oUIBlock.GetObjectMode() == constant('cmdbAbstractObject::ENUM_OBJECT_MODE_STIMULUS') %}
+        {% elseif oUIBlock.GetObjectMode() == constant('cmdbAbstractObject::ENUM_DISPLAY_MODE_STIMULUS') %}
             $('#{{ oUIBlock.GetId() }}').on('save_object', function(){
                 $(this).find('button[type="submit"][name="submit"][value="submit"]').click();
             });

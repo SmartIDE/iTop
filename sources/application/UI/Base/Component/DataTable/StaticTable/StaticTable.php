@@ -30,6 +30,7 @@ class StaticTable extends UIContentBlock
 		'node_modules/datatables.net-scroller/js/dataTables.scroller.min.js',
 		'node_modules/datatables.net-select/js/dataTables.select.min.js',
 		'js/field_sorter.js',
+		'js/table-selectable-lines.js',
 		'js/dataTables.main.js',
 		'js/dataTables.settings.js',
 		'js/dataTables.pipeline.js',
@@ -82,10 +83,14 @@ class StaticTable extends UIContentBlock
 
 	/**
 	 * @param array $aColumns
+	 *
+	 * @return $this
 	 */
-	public function SetColumns(array $aColumns): void
+	public function SetColumns(array $aColumns)
 	{
 		$this->aColumns = $aColumns;
+
+		return $this;
 	}
 
 	/**
@@ -98,18 +103,26 @@ class StaticTable extends UIContentBlock
 
 	/**
 	 * @param array $aData
+	 *
+	 * @return $this
 	 */
-	public function SetData(array $aData): void
+	public function SetData(array $aData)
 	{
 		$this->aData = $aData;
+
+		return $this;
 	}
 
 	/**
 	 * @param string $sFilter
+	 *
+	 * @return $this
 	 */
-	public function SetFilter($sFilter): void
+	public function SetFilter($sFilter)
 	{
 		$this->sFilter = $sFilter;
+
+		return $this;
 	}
 
 	public function GetJSRefresh(): string
