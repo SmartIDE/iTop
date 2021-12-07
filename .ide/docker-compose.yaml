@@ -1,0 +1,28 @@
+  itop-web:
+    image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-opvscode-php:latest
+    restart: always
+    environment:
+      ROOT_PASSWORD: root123
+    volumes:
+      - .:/home/project
+    expose:
+      - 3000
+    ports:
+      - 8080:80
+    networks:
+      - smartide-network
+  itop-db:
+    image: registry.cn-hangzhou.aliyuncs.com/chileeb/mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: leansoft
+    restart: always
+    volumes:
+      - .ide/mysql/conf/my.cnf:/etc/my.cnf
+      - ../mysql-db:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - smartide-network
+  networks:
+    smartide-network:
+      external: true
