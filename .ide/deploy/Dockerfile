@@ -1,31 +1,27 @@
 FROM phusion/baseimage:bionic-1.0.0
-MAINTAINER Vladimir Kunin <vladimir@knowitop.ru>
+MAINTAINER chileeb <chileeb@163.com>
 
-ARG DEBIAN_FRONTEND=noninteractive
-ARG ITOP_VERSION=3.0.0-beta
-ARG ITOP_FILENAME=iTop-3.0.0-beta-7312.zip
+ARG ITOP_GIT_URL=https://github.com/SmartIDE/iTop.git
 
-RUN apt-get install -y software-properties-common \
+RUN apt-get install -y software-properties-common ca-certificates \
     && add-apt-repository -y ppa:ondrej/php \
     && apt-get update \
     && apt-get install -y \
         apache2 \
-        php7.3 php7.3-xml php7.3-mysql php7.3-json php7.3-mbstring php7.3-ldap php7.3-soap php7.3-zip php7.3-gd php-apcu \
+        php7.4 php7.4-xml php7.4-mysql php7.4-json php7.4-mbstring php7.4-ldap php7.4-soap php7.4-zip php7.4-gd php-apcu \
         graphviz \
         curl \
         unzip\
         git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && update-alternatives --set php /usr/bin/php7.3
+    && update-alternatives --set php /usr/bin/php7.4
 
 # Get iTop
 RUN rm -rf /var/www/html/* \
-    && mkdir -p /tmp/itop \
-    && curl -SL -o /tmp/itop/itop.zip https://sourceforge.net/projects/itop/files/itop/$ITOP_VERSION/$ITOP_FILENAME/download \
-    && unzip /tmp/itop/itop.zip -d /tmp/itop/ \
-    && mv /tmp/itop/web/* /var/www/html \
-    && rm -rf /tmp/itop
+    && git clone $ITOP_GIT_URL \
+    && mv iTop/* /var/www/html \
+    && rm -rf iTop
 
 # Copy services, configs and scripts
 COPY service /etc/service/

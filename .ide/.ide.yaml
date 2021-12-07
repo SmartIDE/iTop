@@ -31,12 +31,12 @@ workspace:
       networks:
         - smartide-network
     itop-db:
-      image: mysql:5.7
+      image: registry.cn-hangzhou.aliyuncs.com/chileeb/mysql:5.7
       environment:
         MYSQL_ROOT_PASSWORD: leansoft
       restart: always
       volumes:
-        - ./mysql/conf/my.cnf:/etc/my.cnf
+        - .ide/mysql/conf/my.cnf:/etc/my.cnf
         - ../mysql-db:/var/lib/mysql
       ports:
         - 3306:3306
